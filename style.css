@@ -163,59 +163,167 @@ h3 {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width:700px){
-    .row{
-        flex-direction:column;
-    }
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 /* Campus */
 
-.campus{
-    width:80%;
-    margin:auto;
-    padding: 50px;
-    text-align: center;
-    
+.campus {
+  width: 80%;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
 }
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom:30px;
-    position: relative;
-    overflow: hidden;
+.campus-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.campus-col img {
+  width: 100%;
+  display: block;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(225, 0, 0, 0.7);
+}
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /*Center in the x axis*/
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
 
+/* Facilities */
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
 }
-.campus-col img{
-    width: 100%;
-    display: block;
+.facilities-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facilities-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.facilities-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.facilities-col p {
+  padding: 0;
+}
 
+/* Testimonials Section */
+.testimonials {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
 }
-.layer{
-    background:transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-    transition: 0.5s;
+.testimonials-col {
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  cursor: pointer;
+  display: flex;
 }
-.layer:hover{
-    background: rgba(225,0,0,0.7);
+.testimonials-col img {
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 30px;
+  border-radius: 50%;
 }
-.layer h3{
-    width:100%;
-    font-weight: 500;
-    color:white;
-    font-size: 26px;
-    bottom: 0;
-    left:50%;
-    transform:  translateX(-50%);  /*Center in the x axis*/
-    position: absolute;
-    opacity:0;
-    transition: 0.5s;
+.testimonials-col p {
+  padding: 0;
 }
-.layer:hover h3{
-    bottom:49%;
-    opacity: 1;
+.testimonials-col h3 {
+  margin-top: 15px;
+  text-align: left;
+}
+.testimonials-col .fa {
+  color: var(--clr-accent);
+}
+@media (max-width: 700px) {
+  .testimonials-col img {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
+/* Call to Action */
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(img/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 20px;
+  }
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.icons .fa {
+  color: var(--clr-accent);
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.fa-heart-o{
+  color:var(--clr-accent)
 }
